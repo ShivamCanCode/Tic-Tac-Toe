@@ -21,17 +21,19 @@ button.forEach(btn => {
                 btn.innerText = "X";
                 turnX = 0;
                 turnO++;
+               count++;
                 btn.disabled = true;
             }
             else{
                 btn.innerText = "O";
                 turnO = 0;
+                count++;
                 turnX++;
                 btn.disabled = true;
             }
             checkWinner();   
             count++;
-            if(count == 9){
+            if(count === 9){
                 draw();
             }
         }
